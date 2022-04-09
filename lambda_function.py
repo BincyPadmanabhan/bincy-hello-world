@@ -21,7 +21,7 @@ def lambda_handler(event, context):
         file=open(temp_file,"r")
         return {
             'statusCode': 200,
-            'body': ("hello world")
+            'body': file.read()
 }
 
     except botocore.exceptions.ClientError as e:
